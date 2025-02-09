@@ -10,7 +10,18 @@
                 "ms-python.python",
                 "ms-python.vscode-pylance",
                 "charliermarsh.ruff", // Ruff extension
-                "eamodio.gitlens"
+                "eamodio.gitlens",
+                "ms-toolsai.jupyter",
+                "ms-toolsai.jupyter-renderers",
+                "ms-toolsai.vscode-jupyter-cell-tags",
+                "ms-toolsai.jupyter-keymap",
+                "yzhang.markdown-all-in-one",
+                "github.vscode-github-actions",
+                // "ryanluker.vscode-coverage-gutters",
+                "mhutchie.git-graph",
+                "ms-azuretools.vscode-docker"
+
+
             ],
             "settings": {
                 "python.formatting.provider": "ruff",
