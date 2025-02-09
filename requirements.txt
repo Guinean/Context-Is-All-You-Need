@@ -1,0 +1,4 @@
+ruff
+llama-index
+pydantic
+pydantic-ai
