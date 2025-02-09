@@ -1,6 +1,7 @@
 {
     "name": "Python Dev Environment",
     "build": {
+        "context": "../",
         "dockerfile": "Dockerfile"
     },
     "customizations": {
@@ -24,6 +25,6 @@
             }
         }
     },
-    "forwardPorts": [],
-    "postCreateCommand": "pip install -r requirements.txt ruff" // Install ruff
+    "forwardPorts": []
+    // "postCreateCommand": "pip install -r requirements.txt ruff" // Install ruff
 }

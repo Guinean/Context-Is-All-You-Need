@@ -1,7 +1,9 @@
-FROM python:3.13.2-slim-bookworm  # Choose a specific Python version
+# Choose a specific Python version
+FROM python:3.13.2-slim-bookworm  
 
 # Set working directory inside the container
-WORKDIR /workspaces/core  #  /workspaces/your-project-name will be mounted to your local project folder
+WORKDIR /workspaces/context_is_all_you_need  
+#  /workspaces/your-project-name will be mounted to your local project folder
 
 # Copy requirements.txt if it exists and install dependencies
 COPY requirements.txt .
