@@ -5,3 +5,4 @@ pydantic
 pydantic-ai
 pytest
 ipykernel
+ipywidgets
