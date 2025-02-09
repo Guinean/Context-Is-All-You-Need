@@ -1,5 +1,6 @@
 ruff
-llama-index
+llama-index-llms-gemini
+llama-index-core
 pydantic
 pydantic-ai
 pytest
