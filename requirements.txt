@@ -6,3 +6,5 @@ pydantic-ai
 pytest
 ipykernel
 ipywidgets
+r2r
+knowledge-storm
