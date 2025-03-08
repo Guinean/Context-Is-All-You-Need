@@ -1,10 +1,12 @@
 ruff
-llama-index-llms-gemini
-llama-index-core
-pydantic
-pydantic-ai
+# llama-index-llms-gemini
+# llama-index-core
+# pydantic
+# pydantic-ai
 pytest
 ipykernel
 ipywidgets
-r2r
-knowledge-storm
+# r2r[core]
+# knowledge-storm
+google-genai
+# pillow
