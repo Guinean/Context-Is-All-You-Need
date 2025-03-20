@@ -1,12 +1,13 @@
 ruff
 # llama-index-llms-gemini
 # llama-index-core
-# pydantic
+pydantic
 # pydantic-ai
-pytest
+# pytest
 ipykernel
 ipywidgets
-# r2r[core]
+r2r[core]==3.5.3
+# -e git+https://github.com/SciPhi-AI/R2R.git@<commit_hash>#egg=R2R&subdirectory=py[core]
 # knowledge-storm
 google-genai
 # pillow
