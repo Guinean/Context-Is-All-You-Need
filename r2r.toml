@@ -12,7 +12,7 @@ default_max_upload_size = 214748364800
 fast_llm = "gemini/gemini-2.0-flash"
 
 # LLM used for user-facing output, like RAG replies
-quality_llm = "gemini/gemini-2.0-flash-thinking-exp-01-21"
+quality_llm = "gemini/gemini-2.0-flash"#"gemini/gemini-2.0-flash-thinking-exp-01-21"
 
 # LLM used for ingesting visual inputs
 vlm = "gemini/gemini-2.0-flash"
@@ -21,8 +21,8 @@ vlm = "gemini/gemini-2.0-flash"
 audio_lm = "gemini/gemini-2.0-flash"
 
 #UNDOCUMENTED
-reasoning_llm = "gemini/gemini-2.0-flash-thinking-exp-01-21"
-planning_llm = "gemini/gemini-2.0-flash-thinking-exp-01-21"
+reasoning_llm = "gemini/gemini-2.0-flash"#"gemini/gemini-2.0-flash-thinking-exp-01-21"
+planning_llm = "gemini/gemini-2.0-flash"#"gemini/gemini-2.0-flash-thinking-exp-01-21"
 
 [agent]
 agent_static_prompt = "static_rag_agent"
@@ -41,7 +41,7 @@ default_admin_password = "change_me_immediately"
 
 [completion]
 provider = "r2r"
-concurrent_request_limit = 64
+concurrent_request_limit = 1
 
   [completion.generation_config]
   temperature = 0.1
@@ -72,22 +72,23 @@ collection_summary_prompt = "collection_summary"
 provider = "litellm"
 # For basic applications, use `openai/text-embedding-3-small` with `base_dimension = 512`
 # For advanced applications, use `openai/text-embedding-3-large` with `base_dimension = 3072` and binary quantization
-base_model = "gemini/gemini-embedding-exp-03-07"
+base_model = "gemini/text-embedding-004"
 base_dimension = nan
 # rerank_model = "huggingface/mixedbread-ai/mxbai-rerank-large-v1" # reranking model
 batch_size = 128
 add_title_as_prefix = true
-concurrent_request_limit = 5
+concurrent_request_limit = 1
 quantization_settings = { quantization_type = "FP32" }
 
 [completion_embedding]
 # Generally this should be the same as the embedding config, but advanced users may want to run with a different provider to reduce latency
 provider = "litellm"
-base_model = "gemini/gemini-embedding-exp-03-07"
+base_model = "gemini/text-embedding-004"
 base_dimension = nan
 batch_size = 128
 add_title_as_prefix = true
-concurrent_request_limit = 5
+concurrent_request_limit = 1
+# litellm_kwargs = {}
 
 [ingestion]
 provider = "r2r"
