@@ -1,4 +1,6 @@
 local_docs/*
+!local_docs/.gitkeep
+notebooks/tmp/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

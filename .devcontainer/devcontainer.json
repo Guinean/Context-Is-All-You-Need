@@ -3,52 +3,72 @@
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/workspaces/ciayn",
-
 	"customizations": {
-	    "vscode": {
-	        "extensions": [
-	            "ms-python.python",
-	            "ms-python.vscode-pylance",
-	            "charliermarsh.ruff", // Ruff extension
-	            "eamodio.gitlens",
-	            "ms-toolsai.jupyter",
-	            "ms-toolsai.jupyter-renderers",
-	            "ms-toolsai.vscode-jupyter-cell-tags",
-	            "ms-toolsai.jupyter-keymap",
-	            "yzhang.markdown-all-in-one",
-	            "github.vscode-github-actions",
-	            // "ryanluker.vscode-coverage-gutters",
-	            "mhutchie.git-graph",
-	            "ms-azuretools.vscode-docker",
-	            "tamasfe.even-better-toml"
-	        ],
-	        "settings": {
-	            "python.formatting.provider": "ruff",
-	            "python.linting.flake8Enabled": false, // Disable flake8
-	            "python.linting.ruffEnabled": true,      // Enable ruff
-	            "python.testing.pytestEnabled": true,
-	            "python.testing.unittestEnabled": false,
-	            "editor.formatOnSave": true,
-	            "notebook.formatOnSave.enabled": true,
-	            "notebook.codeActionsOnSave": {
-	                "notebook.source.fixAll": "explicit",
-	                "notebook.source.organizeImports": "explicit"
-	            },
-	            // "editor.defaultFormatter": "charliermarsh.ruff",
-	            "files.trimTrailingWhitespace": true,
-	            "files.insertFinalNewline": true
-	        },
-	        "[python]": {
-	            "editor.formatOnSave": true,
-	            "editor.codeActionsOnSave": {
-	              "source.fixAll": "explicit",
-	              "source.organizeImports": "explicit"
-	            },
-	            "editor.defaultFormatter": "charliermarsh.ruff"
-	          }
-	    }
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"charliermarsh.ruff", // Ruff extension
+				// "eamodio.gitlens",
+				"ms-toolsai.jupyter",
+				"ms-toolsai.jupyter-renderers",
+				"ms-toolsai.vscode-jupyter-cell-tags",
+				"ms-toolsai.jupyter-keymap",
+				"yzhang.markdown-all-in-one",
+				"github.vscode-github-actions",
+				// "ryanluker.vscode-coverage-gutters",
+				"mhutchie.git-graph",
+				"ms-azuretools.vscode-docker",
+				"tamasfe.even-better-toml",
+				"dendron.dendron",
+				"dendron.dendron-paste-image",
+				"dendron.dendron-markdown-shortcuts"
+				// "yzhang.markdown-all-in-one",
+				// "pkief.markdown-checkbox",
+				// "csholmq.excel-to-markdown-table"
+			],
+			"settings": {
+				"python.formatting.provider": "ruff",
+				"python.linting.flake8Enabled": false, // Disable flake8
+				"python.linting.ruffEnabled": true, // Enable ruff
+				"python.testing.pytestEnabled": true,
+				"python.testing.unittestEnabled": false,
+				"editor.formatOnSave": true,
+				"notebook.formatOnSave.enabled": true,
+				"notebook.codeActionsOnSave": {
+					"notebook.source.fixAll": "explicit",
+					"notebook.source.organizeImports": "explicit"
+				},
+				// "editor.defaultFormatter": "charliermarsh.ruff",
+				"files.trimTrailingWhitespace": true,
+				"files.insertFinalNewline": true,
+				"dendron.rootDir": "./Dendron",
+				"dendron.enableSelfContainedVaultWorkspace": true,
+				"dendron.defaultJournalDateFormat": "Y.MM.DD",
+				"dendron.defaultScratchDateFormat": "Y.MM.DD-HHmmss",
+				"pasteImage.path": "${currentFileDir}/assets/images",
+				"pasteImage.prefix": "/",
+				"editor.snippetSuggestions": "inline",
+				"editor.suggest.snippetsPreventQuickSuggestions": false,
+				"editor.suggest.showSnippets": true,
+				"editor.tabCompletion": "on",
+				"workbench.hover.delay": 300
+			},
+			"[python]": {
+				"editor.formatOnSave": true,
+				"editor.codeActionsOnSave": {
+					"source.fixAll": "explicit",
+					"source.organizeImports": "explicit"
+				},
+				"editor.defaultFormatter": "charliermarsh.ruff"
+			}
+		}
 	},
 	// "forwardPorts": [5000, 5432],
-	"forwardPorts": [5000,5432,7272],
+	"forwardPorts": [
+		5000,
+		5432,
+		7272
+	],
 	"postCreateCommand": "pip freeze > PostCreateLast_requirements_frozen.txt"
 }
